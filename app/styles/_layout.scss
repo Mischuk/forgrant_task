@@ -1,0 +1,23 @@
+/*==========================================
+                LAYOUT
+==========================================*/
+body {
+    position: relative;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.wrapper {
+    @include clearfix;
+    position: relative;
+    max-width: $wrapper;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main {
+    padding: 15px;
+}

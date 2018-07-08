@@ -1,0 +1,1 @@
+$(function() {    $('a[href="#"]').click(function(e){      e.preventDefault();    });    console.log('initial header.js');});

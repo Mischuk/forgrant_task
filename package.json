@@ -1,0 +1,43 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "frontend",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend",
+    "bem",
+    "pug",
+    "sass",
+    "js"
+  ],
+  "author": "Alexander Mischuk",
+  "license": "ISC",
+  "devDependencies": {
+    "beeper": "^1.1.1",
+    "bemto.pug": "^2.1.0",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.5",
+    "chalk": "^2.4.1",
+    "emitty": "^1.4.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-include": "^2.3.1",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8",
+    "gulp.spritesmith": "^6.9.0",
+    "vinyl-ftp": "^0.6.1"
+  }
+}

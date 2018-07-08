@@ -1,0 +1,39 @@
+include ../../node_modules/bemto.pug/bemto.pug
+
+include ../modules/header/_header.pug
+include ../modules/footer/_footer.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+
+        title #{pageTitle || "Заголовок страницы"}
+
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1")
+        meta(name="format-detection" content="telephone=no")
+
+        link(rel="stylesheet" href="css/bootstrap.css")
+        link(rel="stylesheet" href="css/libs.css")
+        link(rel="stylesheet" href="css/main.css")
+        script(src="js/modernizr.js")
+
+    body
+
+        block header
+            +header
+
+        block content
+
+        block footer
+            +footer
+
+        script(src="js/jquery-3.2.1.min.js")
+        script(src="js/libs.js")
+        script(src="js/app.js")
+
+        block scripts
+
