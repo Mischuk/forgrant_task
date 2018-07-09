@@ -1,29 +1,102 @@
-<!-- FOOTER-->
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Index</title>
+    <title>Тестовое задание для Форгрант</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/modernizr.js"></script>
 </head>
 
 <body>
+    <!-- HEADER-->
     <header class="header">
-        <div class="wrapper">HEADER</div>
+        <nav class="menu nav justify-content-center">
+            <div class="menu__item"><a class="menu__link" href="#">Личная информация</a></div>
+            <div class="menu__item"><a class="menu__link" href="#">Опыт</a></div>
+            <div class="menu__item"><a class="menu__link" href="#">О себе</a></div>
+        </nav>
     </header>
-    <h1>Hello, world!</h1>
-    <footer class="footer">
-        <div class="wrapper">FOOTER</div>
-    </footer>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/libs.js"></script>
+    <!-- end HEADER-->
+    <main class="main">
+        <div class="section-background"></div>
+        <div class="content">
+            <h1 class="headling headling_large">Анкета</h1>
+            <form class="form">
+                <section class="section">
+                    <div class="section-title">
+                        <div class="section-title__icon">
+                            <div class="icon icon_personal"></div>
+                        </div>
+                        <h2 class="headling">Личная информация</h2>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__row"><label class="form__label"><input class="form__input js-input has-value" type="text" placeholder="" autocomplete="off" value="Мищук Александр"/><span class="form__placeholder">ФИО</span></label></div>
+                        <div class="form__row form__row_small"><label class="form__label"><select class="form__select js-input custom-select has-value"><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990" selected="selected">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option></select><span class="form__placeholder">Год рождения</span></label></div>
+                        <div
+                            class="form__row"><label class="form__label"><input class="form__input js-input has-value" type="text" placeholder="" autocomplete="off" value="г. Киев"/><span class="form__placeholder">Место проживания</span></label></div>
+                    <div class="form__row"><label class="form__label"><input class="form__input js-input has-value" type="text" placeholder="" autocomplete="off" value="mischuk.alexander"/><span class="form__placeholder">Skype</span></label></div>
+                    <div class="form__row"><label class="form__label"><input class="form__input js-input has-value" type="text" placeholder="" autocomplete="off" value="mischuk.alexander@gmail.com"/><span class="form__placeholder">Email</span></label></div>
+        </div>
+        </section>
+        <section class="section">
+            <div class="section-title">
+                <div class="section-title__icon">
+                    <div class="icon icon_experience"></div>
+                </div>
+                <h2 class="headling">Расскажите о своем опыте</h2>
+            </div>
+            <div class="form__checkboxed">
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex1" /><label class="checkbox__icon custom-control-label" for="ex1">БЭМ/OOCSS</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex4" /><label class="checkbox__icon custom-control-label" for="ex4">Верстаю семантично</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex7" /><label class="checkbox__icon custom-control-label" for="ex7">Webpack</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex2" /><label class="checkbox__icon custom-control-label" for="ex2">Stylus/LESS/SASS</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex5" /><label class="checkbox__icon custom-control-label" for="ex5">ES2015/ES2016</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex8" /><label class="checkbox__icon custom-control-label" for="ex8">jQuery</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex3" /><label class="checkbox__icon custom-control-label" for="ex3">Работаю с SVG</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex6" /><label class="checkbox__icon custom-control-label" for="ex6">Gulp/Grunt</label></div>
+                </div>
+                <div class="form__column">
+                    <div class="checkbox custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" checked="checked" id="ex9" /><label class="checkbox__icon custom-control-label" for="ex9">Использую Git</label></div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section-title">
+                <div class="section-title__icon">
+                    <div class="icon icon_about"></div>
+                </div>
+                <h2 class="headling">Расскажите о себе</h2>
+                <div class="section-title__paragraph">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</div>
+            </div>
+            <div class="form__group">
+                <div class="form__row"><label class="form__label"><textarea class="form__textarea js-input" placeholder="" autocomplete="off">Хотелось бы работать под грамотным руководством, которое точно понимает что нужно делать и зачем, и умеет выстроить гармоничный рабочий процесс.</textarea><span class="form__placeholder form__placeholder_left">Понравилась тем, что...</span></label></div>
+                <div
+                    class="form__row"><button class="form__submit" type="submit">Готово</button></div>
+            </div>
+        </section>
+        </form>
+        </div>
+    </main>
     <script src="js/app.js"></script>
     <script>
         console.log('Initial index.html')

@@ -1,11 +1,40 @@
 extends _layout.pug
 
 block variables
-    - var pageTitle = "Index"
-    - var user_authenticated = false
+    - var pageTitle = "Тестовое задание для Форгрант"
 
 block content
-    h1 Hello, world!
+    main.main
+        .section-background
+        .content
+            +b.H1.headling._large Анкета
+            +b.FORM.form
+                section.section
+                    +section-title('Личная информация')(class="_personal")
+                    +e.group
+                        +form_input('ФИО')(class="has-value" value="Мищук Александр")
+                        +form_select('Год рождения')(class="has-value")
+                        +form_input('Место проживания')(class="has-value" value="г. Киев")
+                        +form_input('Skype')(class="has-value" value="mischuk.alexander")
+                        +form_input('Email')(class="has-value" value="mischuk.alexander@gmail.com")
+                section.section
+                    +section-title('Расскажите о своем опыте')(class="_experience")
+                    +e.checkboxed
+                        +form_checkbox('БЭМ/OOCSS', 'ex1')
+                        +form_checkbox('Верстаю семантично', 'ex4')
+                        +form_checkbox('Webpack', 'ex7')
+                        +form_checkbox('Stylus/LESS/SASS', 'ex2')
+                        +form_checkbox('ES2015/ES2016', 'ex5')
+                        +form_checkbox('jQuery', 'ex8')
+                        +form_checkbox('Работаю с SVG', 'ex3')
+                        +form_checkbox('Gulp/Grunt', 'ex6')
+                        +form_checkbox('Использую Git', 'ex9')
+                section.section
+                    +section-title('Расскажите о себе', 'Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.')(class="_about")
+                    +e.group
+                        +form_textarea('Понравилась тем, что...', 'Хотелось бы работать под грамотным руководством, которое точно понимает что нужно делать и зачем, и умеет выстроить гармоничный рабочий процесс.')
+                        +e.row
+                            +e.BUTTON.submit(type="submit") Готово
 
 block scripts
     script.

@@ -1,7 +1,3 @@
-$(function() {
-    $('a[href="#"]').click(function(e){
-      e.preventDefault();
-    });
-
+document.addEventListener("DOMContentLoaded", function(event) {
     //=include modules.js
 });

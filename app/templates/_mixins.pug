@@ -1,0 +1,45 @@
+mixin section-title(title, paragraph)
+    +b.section-title
+        +e.icon
+            +b.icon&attributes(attributes)
+        +b.H2.headling= title
+        if paragraph
+            +e.paragraph= paragraph
+
+mixin form_textarea(placeholder, text)
+    +e.row
+        +e.LABEL.label
+            +e.TEXTAREA.textarea.js-input(placeholder="" autocomplete="off")&attributes(attributes)= text
+            +e.SPAN.placeholder._left= placeholder
+mixin form_input(placeholder)
+    +e.row
+        +e.LABEL.label
+            +e.INPUT.input.js-input(type="text" placeholder="" autocomplete="off")&attributes(attributes)
+            +e.SPAN.placeholder= placeholder
+
+mixin form_select(placeholder)
+    +e.row._small
+        +e.LABEL.label
+            +e.SELECT.select.js-input.custom-select&attributes(attributes)
+                option(value="2000") 2000
+                option(value="1999") 1999
+                option(value="1998") 1998
+                option(value="1997") 1997
+                option(value="1996") 1996
+                option(value="1995") 1995
+                option(value="1994") 1994
+                option(value="1993") 1993
+                option(value="1992") 1992
+                option(value="1991") 1991
+                option(value="1990" selected) 1990
+                option(value="1989") 1989
+                option(value="1988") 1988
+                option(value="1987") 1987
+            +e.SPAN.placeholder= placeholder
+
+
+mixin form_checkbox(label, name)
+    +e.column
+        +b.checkbox.custom-control.custom-checkbox
+            input(type="checkbox" class="custom-control-input" checked id=name)
+            +e.LABEL.icon(class="custom-control-label" for=name)= label

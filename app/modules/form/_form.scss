@@ -1,0 +1,198 @@
+/*==========================================
+                    FORM
+==========================================*/
+.form {
+    padding: 0 15px;
+    &__group {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__row {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &_small {
+            @media screen and (min-width: $screen-xs-up) {
+                max-width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__column {
+        @include make-col(12);
+        margin-bottom: 15px;
+        @media screen and (min-width: $screen-xs-up) {
+            @include make-col(6);
+        }
+        @media screen and (min-width: $screen-sm-up) {
+            @include make-col(4);
+        }
+    }
+
+    &__checkboxed {
+        @include make-row();
+        @include make-container();
+        max-width: 700px;
+        margin-bottom: -15px;
+    }
+
+    &__label {
+        display: block;
+        position: relative;
+    }
+
+
+    &__input,
+    &__select,
+    &__textarea {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        border: 1px solid $color_border-input;
+        border-radius: $radius;
+        font-family: $font_base;
+        font-weight: 400;
+        transition: all 300ms ease;
+        cursor: pointer;
+        font-size: 16px;
+        @media screen and (min-width: $screen-xs-up) {
+            font-size: 20px;
+        }
+        &:hover {
+            border-color: lighten($color_border-input-focus, 40%);
+        }
+
+        &:focus {
+            border-color: $color_border-input-focus;
+        }
+
+
+        &:focus,
+        &.has-value {
+            & + .form__placeholder{
+                font-size: 14px;
+                line-height: 30px;
+                cursor: text;
+            }
+        }
+    }
+
+    &__input,
+    &__select {
+        height: 60px;
+        text-align: center;
+    }
+
+    &__input {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        background: none;
+        &:focus {
+            line-height: 30px;
+            cursor: text;
+        }
+    }
+
+    &__select {
+        line-height: $custom-select-line-height;
+        background-color: transparent;
+        text-align-last:center;
+    }
+
+    &__textarea {
+        min-height: 180px;
+        background: none;
+        text-align: left;
+        padding: 15px 20px;
+        min-width: 100%;
+        max-width: 100%;
+        resize: none;
+        &:focus,
+        &.has-value {
+
+            & + .form__placeholder{
+                opacity: 0;
+            }
+        }
+    }
+
+    &__placeholder {
+        @include sn;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        color: $color_placeholder;
+        font-size: 24px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 300ms ease;
+        &_left {
+            text-align: left;
+            padding-left: 20px;
+        }
+    }
+
+    &__submit {
+        display: block;
+        width: 115px;
+        height: 50px;
+        line-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        border-radius: $radius*1.5;
+        background: $color_button-bg;
+        border: none;
+        transition: background-color 300ms ease;
+        &:hover {
+            background: darken($color_button-bg, 5%);
+        }
+        &:active {
+            background: darken($color_button-bg, 10%);
+        }
+    }
+}
+/* end FORM */
+
+.checkbox {
+    @include sn;
+    line-height: 1;
+    min-height: 0;
+    &__icon {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 400;
+        &:before {
+            border: 1px solid $color_blue;
+        }
+    }
+    .custom-control-label::before,
+    .custom-control-label::after {
+        top: 0;
+    }
+    .custom-control-input:checked ~ .custom-control-label::after {
+        background-color: $color_blue;
+        border-radius: $custom-checkbox-indicator-border-radius;
+    }
+    .custom-control-input:focus ~ .custom-control-label::before {
+        box-shadow: none;
+    }
+
+    .custom-control-input:active ~ .custom-control-label::before {
+
+    }
+}
+

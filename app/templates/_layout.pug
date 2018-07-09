@@ -1,7 +1,7 @@
 include ../../node_modules/bemto.pug/bemto.pug
 
+include _mixins.pug
 include ../modules/header/_header.pug
-include ../modules/footer/_footer.pug
 
 block variables
 
@@ -16,10 +16,11 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1")
         meta(name="format-detection" content="telephone=no")
 
+        link(href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;subset=cyrillic" rel="stylesheet")
+
         link(rel="stylesheet" href="css/bootstrap.css")
-        link(rel="stylesheet" href="css/libs.css")
+        //- link(rel="stylesheet" href="css/libs.css")
         link(rel="stylesheet" href="css/main.css")
-        script(src="js/modernizr.js")
 
     body
 
@@ -28,11 +29,8 @@ html(lang="ru")
 
         block content
 
-        block footer
-            +footer
-
-        script(src="js/jquery-3.2.1.min.js")
-        script(src="js/libs.js")
+        //- script(src="js/jquery-3.2.1.min.js")
+        //- script(src="js/libs.js")
         script(src="js/app.js")
 
         block scripts

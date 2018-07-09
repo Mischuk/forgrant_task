@@ -204,9 +204,7 @@ table {
     border-spacing: 0;
 }
 
-select {
-    opacity: 0;
-}
+
 
 *, :after, :before {
     box-sizing: inherit;
@@ -218,3 +216,4 @@ select {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
+::-ms-clear { display:none; }

@@ -1,3 +1,9 @@
 mixin header
-    header(class=user_authenticated ? 'header is-authenticated' : 'header')
-        .wrapper HEADER
+    // HEADER
+    header.header
+        +b.NAV.menu.nav.justify-content-center
+            - var header_nav = ['Личная информация', 'Опыт', 'О себе']
+            each item in header_nav
+                +e.item
+                    +e.A(href="#").link= item
+    // end HEADER

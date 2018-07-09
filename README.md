@@ -1,1 +1,1 @@
-# [Тестовое задания для Форгрант](http://frontend.watch/forgrant_task)
+#[Тестовое задание для Форгрант](http://frontend.watch/forgrant_task)

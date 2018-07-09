@@ -1,0 +1,16 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &_personal {
+        @include retina-sprite($personal-group);
+    }
+
+    &_experience {
+        @include retina-sprite($experience-group);
+    }
+
+    &_about {
+        @include retina-sprite($about-group);
+    }
+}

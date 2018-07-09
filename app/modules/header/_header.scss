@@ -1,9 +1,49 @@
 /*==========================================
-                HEADER
+                  HEADER
 ==========================================*/
 .header {
-    position: relative;
-    padding: 15px;
-    background: lightgray;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 2px rgba(50,50,50,.1);
+    transition: all 300ms ease;
+    &.is-small {
+        height: 40px;
+        line-height: 40px;
+    }
 }
+/* end HEADER */
+
+/*==========================================
+                    MENU
+==========================================*/
+
+.menu {
+    text-align: center;
+    font-size: 0;
+
+    &__link {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color_link;
+        transition: color 300ms ease;
+        @media screen and (min-width: $screen-xs-up) {
+            padding: 0 25px;
+            font-size: 14px;
+        }
+        &:hover {
+            color: $color_link-hover;
+        }
+    }
+}
+/* end MENU */

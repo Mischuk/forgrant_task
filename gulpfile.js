@@ -1,7 +1,7 @@
 /////////////////////////////////////////
 //              VARIABLES              //
 /////////////////////////////////////////
-var PROJECT_NAME = 'starter',
+var PROJECT_NAME = 'forgrant_task',
     JQUERY_VERSION = 'jquery-3.2.1.min.js';
 
 /* Global variables */
@@ -90,10 +90,10 @@ gulp.task('serve', function() {
         port: 8080,
         open: false,
         notify: false,
-        ghostMode: false,
-        logSnippet: false,
-        logLevel: "silent",
-        logFileChanges: false,
+        // ghostMode: false,
+        // logSnippet: false,
+        // logLevel: "silent",
+        // logFileChanges: false,
         reloadOnRestart: false,
         scrollProportionally: false
     });
